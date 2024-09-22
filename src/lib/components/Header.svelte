@@ -5,6 +5,9 @@
 </script>
 
 <header>
+	<h1>
+		<a href="/">Plone4Svelte</a>
+	</h1>
 	{#if data}
 		<nav class="global-navigation">
 			<ul>

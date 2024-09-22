@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+	--font-size-base: 16px;
+	--font-size-medium: 14px;
+	--font-size-small: 12px;
+	--font-family: 'Montserrat', sans-serif;
+	--font-size-title-m: var(--font-size-base);
+	--font-size-title-s: var(--font-size-medium);
+	--line-height-body-s: calc(var(--font-size-base) * 1.125);
+	--line-height-body: calc(var(--font-size-base) * 1.25);
+	--line-height-title-m-mobile: calc(var(--font-size-base) * 1.625);
+	--line-height-title-m: calc(var(--font-size-base) * 1.75);
+	--line-height-title-s: calc(var(--font-size-base) * 1.375);
+	--font-weight-thin: 300;
+	--font-weight-regular: 400;
+	--font-weight-semi-bold: 500;
+	--font-weight-bold: 700;
+
+	--spacer: 8px;
+	--rhythm-0_25: calc(var(--spacer) * 0.25); /*   .25 unit -   2px */
+	--rhythm-0_5: calc(var(--spacer) * 0.5); /*   .5  unit -   4px */
+	--rhythm-1: var(--spacer); /*  1    unit -   8px */
+	--rhythm-1_5: calc(var(--spacer) * 1.5); /*  1.5  unit -  12px */
+	--rhythm-2: calc(var(--spacer) * 2); /*  2    unit -  16px */
+	--rhythm-2_5: calc(var(--spacer) * 2.5); /*  2    unit -  20px */
+	--rhythm-3: calc(var(--spacer) * 3); /*  3    unit -  24px */
+	--rhythm-4: calc(var(--spacer) * 4); /*  4    unit -  32px */
+	--rhythm-5: calc(var(--spacer) * 5); /*  5    unit -  40px */
+	--rhythm-6: calc(var(--spacer) * 6); /*  6    unit -  48px */
+	--rhythm-7: calc(var(--spacer) * 7); /*  7    unit -  56px */
+	--rhythm-8: calc(var(--spacer) * 8); /*  8    unit -  64px */
+	--rhythm-9: calc(var(--spacer) * 9); /*  9    unit -  72px */
+	--rhythm-10: calc(var(--spacer) * 10); /*  10   unit -  80px */
+
+	--denim: hsl(207, 90%, 7%);
+	--white: #fff;
+
+	--dolphin: hsl(207, 17%, 58%);
+	--silver: hsl(207, 17%, 80%);
+	--smoke: hsl(207, 17%, 91%);
+	--snow: hsl(207, 17%, 96%);
+	--steam: hsl(207, 17%, 98%);
+
+	--royal: hsl(207, 90%, 31%);
+	--sapphire: hsl(207, 90%, 43%);
+	--cobalt: hsl(207, 90%, 55%);
+	--azure: hsl(207, 90%, 73%);
+	--sky: hsl(207, 90%, 85%);
+	--arctic: hsl(207, 90%, 92%);
+
+	--wine: hsl(7, 90%, 35%);
+	--candy: hsl(7, 90%, 43%);
+	--rose: hsl(7, 90%, 59%);
+	--poppy: hsl(7, 90%, 78%);
+	--flamingo: hsl(7, 90%, 89%);
+	--ballet: hsl(7, 90%, 95%);
+
+	--puya: hsl(175, 60%, 23%);
+	--peacock: hsl(175, 60%, 31%);
+	--turquoise: hsl(175, 60%, 40%);
+	--tiffany: hsl(175, 60%, 66%);
+	--spa: hsl(175, 60%, 83%);
+	--aqua: hsl(175, 60%, 90%);
+
+	--color-dark-stronger: var(--denim);
+
+	--color-light-stronger: var(--white);
+
+	--color-neutral-regular: var(--dolphin);
+	--color-neutral-light: var(--silver);
+	--color-neutral-lighter: var(--smoke);
+	--color-neutral-lightest: var(--snow);
+
+	--color-primary-stronger: var(--royal);
+	--color-primary-strong: var(--sapphire);
+	--color-primary-regular: var(--cobalt);
+	--color-primary-light: var(--azure);
+	--color-primary-lighter: var(--sky);
+	--color-primary-lightest: var(--arctic);
+
+	--color-secondary-stronger: var(--wine);
+	--color-secondary-strong: var(--candy);
+	--color-secondary-regular: var(--rose);
+	--color-secondary-light: var(--poppy);
+	--color-secondary-lighter: var(--flamingo);
+	--color-secondary-lightest: var(--ballet);
+
+	--color-tertiary-stronger: var(--puya);
+	--color-tertiary-strong: var(--peacock);
+	--color-tertiary-regular: var(--turquoise);
+	--color-tertiary-light: var(--tiffany);
+	--color-tertiary-lighter: var(--spa);
+	--color-tertiary-lightest: var(--aqua);
+
+	--alpha_default: hsla(0, 0%, 100%, 0.5);
+	--alpha_light: hsla(0, 0%, 100%, 0.25);
+	--alpha_lighter: hsla(0, 0%, 100%, 0.15);
+	--alpha_lightest: hsla(0, 0%, 100%, 0.05);
+
+	--color-neutral-inverted-default: var(--alpha_default);
+	--color-neutral-inverted-light: var(--alpha_light);
+	--color-neutral-inverted-lighter: var(--alpha_lighter);
+	--color-neutral-inverted-lightest: var(--alpha_lightest);
+
+	--color-background-body: var(--color-light-stronger);
+	--color-background-header: var(--color-primary-strong);
+	--color-background-footer: var(--color-dark-stronger);
+
+	--color-text-accent: var(--color-dark-stronger);
+	--color-text-dim: var(--color-neutral-regular);
+	--color-text-disabled: var(--color-neutral-light);
+
+	--color-text-link-regular: var(--color-primary-regular);
+	--color-text-link-regular-hover: var(--color-primary-strong);
+
+	--color-text-title-default: var(--color-dark-stronger);
+
+	--font-weight-body: var(--font-weight-thin);
+	--font-weight-title: var(--font-weight-semi-bold);
+	--font-weight-dt: var(--font-weight-thin);
+	--font-weight-dd: var(--font-weight-thin);
+	--font-weight-label: var(--font-weight-semi-bold);
+	--font-weight-placeholder: var(--font-weight-thin);
+	--font-weight-menu-header: var(--font-weight-semi-bold);
+	--font-weight-link: var(--font-weight-semi-bold);
+
+	--text-decoration-link: none;
+	--text-decoration-link-hover: underline;
+	--margin-bottom-title: var(--rhythm-3);
+	--margin-bottom-paragraph: var(--rhythm-1_5);
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-family);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-body);
+	color: var(--color-text-accent);
+	text-align: left;
+	background-color: var(--color-background-body);
+}
+
+a {
+	color: var(--color-text-link-regular);
+	font-weight: var(--font-weight-link);
+	text-decoration: var(--text-decoration-link);
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+a:hover {
+	color: var(--color-text-link-regular-hover);
+	text-decoration: var(--text-decoration-link-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: inherit;
+	font-weight: var(--font-weight-title);
+	margin-top: 0;
+	margin-bottom: var(--margin-bottom-title);
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: $margin-bottom-paragraph;
+}
+
+ol,
+ul,
+dl {
+	margin-top: 0;
+	margin-bottom: var(--rhythm-1_5);
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: var(--font-weight-dt);
+}
+
+dd {
+	font-weight: var(--font-weight-dd);
+	margin-bottom: var(--rhythm-1);
+	margin-left: 0;
+}
+
+header {
+	background-color: var(--color-background-header);
+	color: var(--color-light-stronger);
+}
+footer {
+	background-color: var(--color-background-footer);
+	color: var(--color-light-stronger);
+}
+
+header a,
+footer a {
+	color: var(--color-primary-light);
+}
+header a:hover,
+footer a:hover {
+	color: var(--color-primary-lightest);
+}
+header {
+	display: flex;
+}
+header h1 {
+	margin: var(--rhythm-2);
+}
+.global-navigation {
+	width: 100%;
+}
+.global-navigation ul {
+	text-align: end;
+	margin: var(--rhythm-2);
+}
+.global-navigation li {
+	display: inline-block;
+	padding: 0 var(--rhythm-1);
+}
+.breadcrumbs ul {
+	margin: var(--rhythm-2);
+	padding: 0;
+}
+.breadcrumbs li {
+	display: inline-block;
+	padding-right: var(--rhythm-1);
+}
+.breadcrumbs li::before {
+	content: '/';
+	padding-right: var(--rhythm-1);
+	color: var(--color-primary-light);
+}
+.main-content {
+	margin: var(--rhythm-2);
+}
+footer {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+footer p {
+	margin: var(--rhythm-2) auto;
+}

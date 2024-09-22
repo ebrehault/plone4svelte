@@ -21,12 +21,14 @@
 
 <div class="container">
 	<Header data={$navigation.data} />
-	<div class="main-container">
+	<main>
 		<ContextNavigation data={$contextNavigation.data} />
 		<Breadcrumbs data={$breadcrumbs.data} />
-		<main>
+		<div class="main-content">
 			<slot />
-		</main>
-	</div>
-	<footer></footer>
+		</div>
+	</main>
+	<footer>
+		<p>Made with ❤️ by Eric Bréhault</p>
+	</footer>
 </div>

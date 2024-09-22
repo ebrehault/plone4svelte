@@ -7,8 +7,12 @@
 
 	export let data: PageData;
 
-	let content = createQuery(plone.getContentQuery({ path: data.path }));
-	$: content = createQuery(plone.getContentQuery({ path: data.path }));
+	let currentPath = data.path;
+	let content = createQuery(plone.getContentQuery({ path: currentPath }));
+	$: if (data.path !== currentPath) {
+		currentPath = data.path;
+		content = createQuery(plone.getContentQuery({ path: data.path }));
+	}
 </script>
 
 {#if $content.status === 'pending'}

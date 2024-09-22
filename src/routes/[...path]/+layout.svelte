@@ -8,14 +8,19 @@
 
 	export let data: LayoutData;
 
-	let navigation = createQuery(plone.getNavigationQuery({ path: data.path }));
-	let contextNavigation = createQuery(plone.getContextNavigationQuery({ path: data.path }));
-	let breadcrumbs = createQuery(plone.getBreadcrumbsQuery({ path: data.path }));
+	let currentPath = data.path;
+
+	let navigation = createQuery(plone.getNavigationQuery({ path: currentPath }));
+	let contextNavigation = createQuery(plone.getContextNavigationQuery({ path: currentPath }));
+	let breadcrumbs = createQuery(plone.getBreadcrumbsQuery({ path: currentPath }));
 
 	$: {
-		navigation = createQuery(plone.getNavigationQuery({ path: data.path }));
-		contextNavigation = createQuery(plone.getContextNavigationQuery({ path: data.path }));
-		breadcrumbs = createQuery(plone.getBreadcrumbsQuery({ path: data.path }));
+		if (currentPath !== data.path) {
+			currentPath = data.path;
+			navigation = createQuery(plone.getNavigationQuery({ path: currentPath }));
+			contextNavigation = createQuery(plone.getContextNavigationQuery({ path: currentPath }));
+			breadcrumbs = createQuery(plone.getBreadcrumbsQuery({ path: currentPath }));
+		}
 	}
 </script>
 

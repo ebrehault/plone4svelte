@@ -5,7 +5,7 @@
 </script>
 
 {#if data}
-	<header>
+	<section>
 		<nav class="context-navigation">
 			<ul>
 				{#each data.items as link}
@@ -15,5 +15,5 @@
 				{/each}
 			</ul>
 		</nav>
-	</header>
+	</section>
 {/if}

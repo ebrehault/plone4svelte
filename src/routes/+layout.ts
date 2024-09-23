@@ -1,16 +1,3 @@
-import { browser } from '$app/environment';
-import { QueryClient } from '@tanstack/svelte-query';
-import type { LayoutLoad } from './$types';
+import { loadLayout } from '$lib/helpers';
 
-export const load: LayoutLoad = async ({ params }) => {
-	const queryClient = new QueryClient({
-		defaultOptions: {
-			queries: {
-				enabled: browser,
-				staleTime: 60 * 1000
-			}
-		}
-	});
-
-	return { queryClient, path: params.path };
-};
+export const load = loadLayout;

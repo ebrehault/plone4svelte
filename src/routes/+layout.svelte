@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { QueryClientProvider } from '@tanstack/svelte-query';
+	import Layout from '$lib/Layout.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
-<QueryClientProvider client={data.queryClient}>
+<Layout {data}>
 	<slot />
-</QueryClientProvider>
+</Layout>

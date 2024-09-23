@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getPath } from '$lib/api';
+	import { getPath } from '../api';
 
 	export let data: any | undefined;
 </script>

@@ -3,9 +3,9 @@
 	import Image from '../blocks/Image.svelte';
 	import Title from '../blocks/Title.svelte';
 	import NotSupported from '../blocks/NotSupported.svelte';
-	import Slate from '$lib/blocks/Slate.svelte';
-	import Description from '$lib/blocks/Description.svelte';
-	import Listing from '$lib/blocks/Listing.svelte';
+	import Slate from '../blocks/Slate.svelte';
+	import Description from '../blocks/Description.svelte';
+	import Listing from '../blocks/Listing.svelte';
 
 	let blocks = [];
 	$: {

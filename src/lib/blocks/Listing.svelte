@@ -1,5 +1,5 @@
 <script>
-	import { plone } from '$lib/api';
+	import { plone } from '../api';
 	import { createQuery } from '@tanstack/svelte-query';
 
 	export let block;

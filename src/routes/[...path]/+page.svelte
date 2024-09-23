@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createQuery, type CreateQueryResult } from '@tanstack/svelte-query';
+	import { createQuery } from '@tanstack/svelte-query';
 	import { plone } from '$lib/api';
 	import type { PageData } from '../$types';
 	import BlockLayout from '$lib/components/BlockLayout.svelte';
@@ -58,6 +58,9 @@
 		<ContextNavigation data={$contextNavigation.data} />
 	</main>
 	<footer>
-		<p>Made with ❤️ by Eric Bréhault</p>
+		<p>
+			Made with ❤️ by Eric Bréhault – Powered by <a href="https://plone.org">Plone</a> and
+			<a href="https://svelte.dev">Svelte</a>
+		</p>
 	</footer>
 </div>

@@ -7,7 +7,10 @@
 	import Description from '$lib/blocks/Description.svelte';
 	import Listing from '$lib/blocks/Listing.svelte';
 
-	const blocks = (data.blocks_layout?.items || []).map((id) => data.blocks?.[id]);
+	let blocks = [];
+	$: {
+		blocks = (data.blocks_layout?.items || []).map((id) => data.blocks?.[id]);
+	}
 
 	function getBlockComponent(type: string) {
 		if (type === 'title') {

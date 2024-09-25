@@ -1,13 +1,16 @@
 <script>
 	import { plone } from '../api';
 	import { createQuery } from '@tanstack/svelte-query';
-
+	import { getOverride } from '../helpers';
 	export let block;
 
+	const override = getOverride('listing');
 	let content = createQuery(plone.getQuerystringSearchQuery({ ...block.querystring }));
 </script>
 
-{#if $content.status === 'pending'}
+{#if override}
+	<svelte:component this={override} {data} />
+{:else if $content.status === 'pending'}
 	<span>Loading...</span>
 {:else if $content.status === 'error'}
 	<span>Error: {$content.error.message}</span>

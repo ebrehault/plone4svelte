@@ -1,6 +1,8 @@
 import { browser } from '$app/environment';
 import { QueryClient } from '@tanstack/svelte-query';
 import { plone } from './api';
+import Breadcrumbs from './components/Breadcrumbs.svelte';
+import type { SvelteComponent } from 'svelte';
 
 export const loadLayout = async ({ params }) => {
 	const queryClient = new QueryClient({
@@ -25,4 +27,12 @@ export const loadPage = async ({ params, parent }) => {
 	await queryClient.prefetchQuery(plone.getContextNavigationQuery({ path }));
 
 	return { path };
+};
+
+const _overrides: { [id: string]: any } = {};
+export const getOverride = (componentId: string) => {
+	return _overrides[componentId];
+};
+export const overrideComponent = (id: string, comp: any) => {
+	_overrides[id] = comp;
 };

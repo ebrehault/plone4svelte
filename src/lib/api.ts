@@ -1,6 +1,6 @@
 import ploneClient from '@plone/client';
 
-export const BACKEND = 'http://localhost:8080/Plone';
+export const BACKEND = import.meta.env.VITE_PLONE_BACKEND_URL as string;
 
 export const plone = ploneClient.initialize({
 	apiPath: BACKEND

@@ -14,7 +14,7 @@
 	<span>Loading...</span>
 {:else if $content.status === 'error'}
 	<span>Error: {$content.error.message}</span>
-{:else if $content.data.items}
+{:else if $content.data?.items}
 	{#if block.headline}
 		{#if block.headlineTag === 'h2'}
 			<h2>{block.headline}</h2>
@@ -22,7 +22,7 @@
 			<h3>{block.headline}</h3>
 		{/if}
 	{/if}
-	{#each $content.data.items as item}
+	{#each $content.data?.items as item}
 		{#if block.headlineTag === 'h2'}
 			<h2>{item.title}</h2>
 		{:else}

@@ -1,8 +1,6 @@
 import { browser } from '$app/environment';
 import { QueryClient } from '@tanstack/svelte-query';
 import { plone } from './api';
-import Breadcrumbs from './components/Breadcrumbs.svelte';
-import type { SvelteComponent } from 'svelte';
 
 export const loadLayout = async ({ params }) => {
 	const queryClient = new QueryClient({

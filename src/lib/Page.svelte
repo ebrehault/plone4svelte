@@ -45,9 +45,9 @@
 					<span>Loading...</span>
 				{:else if $content.status === 'error'}
 					<span>Error: {$content.error.message}</span>
-				{:else if $content.data.blocks}
+				{:else if $content.data?.blocks}
 					<BlockLayout data={$content.data} />
-				{:else if $content.data.items}
+				{:else if $content.data?.items}
 					<ListingLayout data={$content.data} />
 				{:else}
 					<span>Unknown content type</span>

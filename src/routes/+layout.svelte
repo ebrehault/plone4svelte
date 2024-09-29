@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Layout from '$lib/Layout.svelte';
+	import { Layout } from 'plone4svelte';
 	import type { PageData } from './$types';
-	// import { overrideComponent } from '$lib/helpers';
+	// import { overrideComponent } from 'plone4svelte';
 	// import CustomBreadcrumbs from '../overrides/CustomBreadcrumbs.svelte';
 
 	export let data: PageData;

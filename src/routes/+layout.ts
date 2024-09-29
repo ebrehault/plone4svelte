@@ -1,3 +1,3 @@
-import { loadLayout } from '$lib/helpers';
+import { loadLayout } from 'plone4svelte';
 
 export const load = loadLayout;

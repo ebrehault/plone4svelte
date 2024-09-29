@@ -1,3 +1,3 @@
-import { loadPage } from '$lib/helpers';
+import { loadPage } from 'plone4svelte';
 
 export const load = loadPage;

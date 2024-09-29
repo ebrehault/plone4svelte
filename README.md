@@ -11,7 +11,7 @@ Plone is great because:
 - That’s the most secure CMS on the market. Security built-in with a track record of over 20 years.
 - It is 100% open source and free, forever.
 
-Thanks to the Plone REST API, Svelte4Plone allows you to use Plone as a headless CMS. You won't need to worry about the backend, you can focus on the frontend.
+Thanks to the Plone REST API, Plone4Svelte allows you to use Plone as a headless CMS. You won't need to worry about the backend, you can focus on the frontend.
 
 ## Setup
 
@@ -36,8 +36,7 @@ Add the Plone4Svelte package:
 npm install plone4svelte
 ```
 
-Remove `./my-app/src/routes/+page.svelte` and copy the `./src/routes` folder content from this repository in
-`./my-app/src/routes`.
+Replace the `./my-app/src/routes` generated folder with the `./src/routes` folder from this repository.
 
 Copy `./static/global.css` from this repository to `./my-app/static/global.css`.
 
